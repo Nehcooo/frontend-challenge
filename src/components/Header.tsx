@@ -22,8 +22,8 @@ function CircleEllipse() {
                 position: "absolute",
                 overflow: "visible",
             }}
-            width="300"
-            height="100"
+            width="100%"
+            height="100%"
             viewBox="0 0 300 100"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ function CircleEllipse() {
                 strokeWidth="2"
             />
         </svg>
-    );
+    )
 }
 
 function Header() {
@@ -47,176 +47,225 @@ function Header() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "flex-start",
-            padding: "1rem 3rem",
+            padding: "1rem 0rem",
             backgroundColor: "rgba(224, 224, 224, 0.30)",
             borderBottom: 1,
             borderLeft: 1,
             borderColor: "custom.border",
             width: "100%",
-            height: "17.5%",
         }}>
             <Box sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "100%",
+                margin: "0 2.5rem",
+                width: "90%",
             }}>
                 <Box sx={{
                     display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-end",
+                    flexDirection: {
+                        xs: "column",
+                        lg: "row"
+                    },
+                    justifyContent: "space-between",
+                    alignItems: {
+                        xs: "center"
+                    },
+                    gap: 2,
                 }}>
-                    <CircleEllipse />
-
-                    <Typography variant="h6" sx={{
-                        fontSize: "2.75rem",
-                        fontWeight: "bold",
-                        color: "primary.main",
+                    <Box sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "flex-end",
+                        position: "relative",
                     }}>
-                        Ma Compagne
-                    </Typography>
+                        <CircleEllipse />
+
+                        <Typography variant="h6" sx={{
+                            fontSize: {
+                                xs: "1.5rem",
+                                sm: "2rem",
+                                md: "2.75rem"
+                            },
+                            fontWeight: "bold",
+                            color: "primary.main",
+                        }}>
+                            Ma Campagne
+                        </Typography>
+
+                        <Box sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            marginRight: "0.4rem",
+                            marginTop: "-0.5rem",
+                        }}>
+                            <CloseIcon sx={{
+                                color: "secondary.main",
+                                fontSize: "1.0rem",
+                                transform: "rotate(10deg)",
+                                marginBottom: "0.0rem",
+                            }} />
+
+                            <CloseIcon sx={{
+                                color: "secondary.main",
+                                fontSize: "1.0rem",
+                                transform: "rotate(10deg)",
+                                marginBottom: "0.35rem",
+                            }} />
+
+                            <CloseIcon sx={{
+                                color: "secondary.main",
+                                fontSize: "1.0rem",
+                                transform: "rotate(10deg)",
+                                marginBottom: "0.70rem",
+                            }} />
+                        </Box>
+                    </Box>
 
                     <Box sx={{
                         display: "flex",
-                        alignItems: "center",
-                        marginRight: "0.4rem",
-                        marginTop: "-0.5rem",
+                        flexDirection: "column",
+                        alignItems: "flex-end",
+                        justifyContent: "center",
+                        position: "relative",
+                        width: {
+                            xs: "100%",
+                            md: "auto"
+                        },
                     }}>
-                        <CloseIcon sx={{
-                            color: "secondary.main",
-                            fontSize: "1.0rem",
-                            transform: "rotate(10deg)",
-                            marginBottom: "0.0rem",
-                        }} />
+                        <Box sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexDirection: {
+                                xs: "column",
+                                md: "row"
+                            },
+                            gap: "0.75rem",
+                            width: "100%",
+                        }}>
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    position: "relative",
+                                    backgroundColor: "#FFFFFF",
+                                    color: "text.primary",
+                                    boxShadow: "none",
+                                    outline: "none",
+                                    fontWeight: "bold",
+                                    fontSize: "0.7rem",
+                                    textTransform: "none",
+                                    border: 1,
+                                    borderColor: "custom.border",
+                                    overflow: "hidden",
+                                    paddingLeft: "1.25rem",
+                                    width: {
+                                        xs: "100%",
+                                        md: "auto"
+                                    },
+                                }}
+                            >
+                                <Box sx={{
+                                    position: "absolute",
+                                    left: "0",
+                                    top: "0",
+                                    backgroundColor: "#6600CC",
+                                    height: "100%",
+                                    width: "0.5rem",
+                                }} />
 
-                        <CloseIcon sx={{
-                            color: "secondary.main",
-                            fontSize: "1.0rem",
-                            transform: "rotate(10deg)",
-                            marginBottom: "0.35rem",
-                        }} />
+                                Mon Code PIN
+                            </Button>
 
-                        <CloseIcon sx={{
-                            color: "secondary.main",
-                            fontSize: "1.0rem",
-                            transform: "rotate(10deg)",
-                            marginBottom: "0.70rem",
-                        }} />
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    backgroundColor: "secondary.main",
+                                    color: "text.secondary",
+                                    boxShadow: "none",
+                                    outline: "none",
+                                    fontWeight: "bold",
+                                    fontSize: "0.7rem",
+                                    textTransform: "none",
+                                    width: {
+                                        xs: "100%",
+                                        md: "auto"
+                                    },
+                                }}
+                                startIcon={<QrCodeIcon />}
+                            >
+                                QR Code
+                            </Button>
+
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    backgroundColor: "primary.main",
+                                    color: "text.secondary",
+                                    boxShadow: "none",
+                                    outline: "none",
+                                    fontWeight: "bold",
+                                    fontSize: "0.7rem",
+                                    width: {
+                                        xs: "100%",
+                                        md: "auto"
+                                    },
+                                }}
+                            >
+                                Sauvegarder
+                            </Button>
+
+                            <IconButton
+                                aria-label="Plus"
+                                sx={{
+                                    borderRadius: 1,
+                                    padding: "6px 8px",
+                                    backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
+                                    color: "primary.main",
+                                    border: 1,
+                                    borderColor: "custom.iconButtonBorder",
+                                    width: {
+                                        xs: "100%",
+                                        md: "auto"
+                                    },
+                                    "&:hover": {
+                                        backgroundColor: "primary.main",
+                                        color: "white",
+                                    }
+                                }}
+                            >
+                                <MoreHorizIcon sx={{
+                                    fontSize: "1.2rem",
+                                }} />
+                            </IconButton>
+                        </Box>
                     </Box>
                 </Box>
 
                 <Box sx={{
                     display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-end",
-                    position: "relative",
+                    alignItems: "center",
+                    justifyContent: {
+                        xs: "center",
+                        lg: "flex-end"
+                    },
+                    gap: "0.75rem",
+                    paddingBottom: "1rem",
+                    paddingTop: {
+                        xs: "1rem",
+                        lg: "0rem",
+                    },
                 }}>
-                    <Box sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.75rem",
+                    <Typography variant="body1" sx={{
+                        fontSize: "0.8rem",
+                        color: "custom.grey",
+                        fontWeight: "500",
                     }}>
-                        <Button
-                            variant="contained"
-                            sx={{
-                                position: "relative",
-                                backgroundColor: "#FFFFFF",
-                                color: "text.primary",
-                                boxShadow: "none",
-                                outline: "none",
-                                fontWeight: "bold",
-                                fontSize: "0.7rem",
-                                textTransform: "none",
-                                border: 1,
-                                borderColor: "custom.border",
-                                overflow: "hidden",
-                                paddingLeft: "1.25rem",
-                            }}
-                        >
-                            <Box sx={{
-                                position: "absolute",
-                                left: "0",
-                                top: "0",
-                                backgroundColor: "#6600CC",
-                                height: "100%",
-                                width: "0.5rem",
-                            }} />
-
-                            Mon Code PIN
-                        </Button>
-
-                        <Button
-                            variant="contained"
-                            sx={{
-                                backgroundColor: "secondary.main",
-                                color: "text.secondary",
-                                boxShadow: "none",
-                                outline: "none",
-                                fontWeight: "bold",
-                                fontSize: "0.7rem",
-                                textTransform: "none",
-                            }}
-                            startIcon={<QrCodeIcon />}
-                        >
-                            QR Code
-                        </Button>
-
-                        <Button
-                            variant="contained"
-                            sx={{
-                                backgroundColor: "primary.main",
-                                color: "text.secondary",
-                                boxShadow: "none",
-                                outline: "none",
-                                fontWeight: "bold",
-                                fontSize: "0.7rem",
-                            }}
-                        >
-                            Sauvegarder
-                        </Button>
-
-                        <IconButton
-                            sx={{
-                                borderRadius: 1,
-                                padding: "6px 8px",
-                                backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.1),
-                                color: "primary.main",
-                                border: 1,
-                                borderColor: "custom.iconButtonBorder",
-                                "&:hover": {
-                                    backgroundColor: "primary.main",
-                                    color: "white",
-                                }
-                            }}
-                        >
-                            <MoreHorizIcon sx={{
-                                fontSize: "1.2rem",
-                            }} />
-                        </IconButton>
-                    </Box>
+                        Disponible jusqu'au 10 déc. 2025
+                    </Typography>
 
                     <Box sx={{
-                        position: "absolute",
-                        bottom: "0",
-                        right: "0",
-                        marginBottom: "-3rem",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.75rem",                    }}>
-                        <Typography variant="body1" sx={{
-                            fontSize: "0.8rem",
-                            color: "custom.grey",
-                            fontWeight: "500",
-                        }}>
-                            Disponible jusqu'au 10 déc. 2025
-                        </Typography>
-
-                        <Box sx={{
-                            width: "8px",
-                            height: "15px",
-                            backgroundColor: "primary.main",
-                        }} />
-                    </Box>
+                        width: "8px",
+                        height: "15px",
+                        backgroundColor: "primary.main",
+                    }} />
                 </Box>
             </Box>
         </Box>
