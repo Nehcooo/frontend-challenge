@@ -163,7 +163,14 @@ function Sidebar() {
                 marginTop: "1rem",
             }}>
                 {navigations.map((navigation, index) => (
-                    <Box key={index}>
+                    <Box key={index} sx={{
+                        width: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: "0.1rem",
+                    }}>
                         <Button
                             variant="text"
                             sx={{
