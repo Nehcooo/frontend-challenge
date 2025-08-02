@@ -210,7 +210,7 @@ function Sidebar() {
                                     xs: "flex",
                                     sm: "none"
                                 },
-                                color: navigation.active ? "primary.main" : "custom.textGrey",
+                                color: navigation.active ? "primary.main" : "custom.textSmallGrey",
                                 backgroundColor: navigation.active ? (theme) => alpha(theme.palette.primary.main, 0.1) : "none",
                                 borderRadius: "0.5rem",
                             }}
@@ -329,7 +329,7 @@ function Sidebar() {
                             xs: "flex",
                             sm: "none"
                         },
-                        color: "custom.textGrey",
+                        color: "custom.textSmallGrey",
                         borderRadius: "0.5rem",
                     }}
                 >
@@ -375,7 +375,7 @@ function Sidebar() {
                             xs: "flex",
                             sm: "none"
                         },
-                        color: "custom.textGrey",
+                        color: "custom.textSmallGrey",
                         borderRadius: "0.5rem",
                     }}
                 >
