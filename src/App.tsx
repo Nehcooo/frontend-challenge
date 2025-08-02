@@ -1,13 +1,13 @@
-import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
-import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
+import Layout from "./components/Layout";
 
 declare module '@mui/material/styles' {
 	interface PaletteOptions {
 		custom: {
 			border: string;
 			iconButtonBorder: string;
+			textGrey: string;
 		};
 	}
 }
@@ -27,6 +27,7 @@ const theme = createTheme({
 		custom: {
 			border: "#E8EAED",
 			iconButtonBorder: "#DADCE0",
+			textGrey: "#666666",
 		},
 	},
 });
@@ -37,15 +38,8 @@ function App() {
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
 
-				<Box sx={{
-					display: "flex",
-					flexDirection: "row",
-					width: "100%",
-					height: "100vh",
-				}}>
-					<Sidebar />
-					<Header />
-				</Box>
+				<Layout>
+				</Layout>
 			</ThemeProvider>
 		</>
 	)
