@@ -181,7 +181,7 @@ function Sidebar() {
                                 alignItems: "center",
                                 justifyContent: "flex-start",
                                 backgroundColor: navigation.active ? (theme) => alpha(theme.palette.primary.main, 0.1) : "none",
-                                color: navigation.active ? "primary.main" : "custom.textGrey",
+                                color: navigation.active ? "primary.main" : "custom.textSmallGrey",
                                 boxShadow: "none",
                                 outline: "none",
                                 fontWeight: "bold",

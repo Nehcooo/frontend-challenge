@@ -8,6 +8,7 @@ declare module '@mui/material/styles' {
 			border: string;
 			iconButtonBorder: string;
 			textGrey: string;
+			textSmallGrey: string;
 		};
 	}
 }
@@ -28,6 +29,7 @@ const theme = createTheme({
 			border: "#E8EAED",
 			iconButtonBorder: "#DADCE0",
 			textGrey: "#666666",
+			textSmallGrey: "#999999",
 		},
 	},
 });
