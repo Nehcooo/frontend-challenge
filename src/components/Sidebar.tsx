@@ -127,9 +127,9 @@ function Sidebar() {
 
                     <KeyboardArrowDownIcon sx={{
                         position: "absolute",
-                        right: "0.25rem",
-                        fontSize: "1.2rem",
-                        color: "custom.iconButtonBorder",
+                        right: "0.50rem",
+                        fontSize: "1rem",
+                        color: "custom.textSmallGrey",
                     }} />
                 </Button>
 
