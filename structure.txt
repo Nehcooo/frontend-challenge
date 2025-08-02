@@ -1,0 +1,49 @@
+.
+├── doc
+│   ├── CampaignType.ts
+│   └── Configuration Campagne.png
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   └── vite.svg
+├── README copy.md
+├── README.md
+├── src
+│   ├── App.tsx
+│   ├── assets
+│   │   ├── card.png
+│   │   ├── flyers.png
+│   │   ├── logo.png
+│   │   ├── mystery.png
+│   │   ├── react.svg
+│   │   ├── slot.png
+│   │   └── wheel.jpg
+│   ├── components
+│   │   ├── Header
+│   │   │   ├── Header.tsx
+│   │   │   └── styles.ts
+│   │   ├── Layout.tsx
+│   │   ├── modals
+│   │   │   └── PinCodeModal
+│   │   │       ├── PinCodeModal.tsx
+│   │   │       └── styles.ts
+│   │   ├── PinCodeSetupBanner
+│   │   │   ├── PinCodeSetupBanner.tsx
+│   │   │   └── styles.ts
+│   │   └── Sidebar
+│   │       ├── Sidebar.tsx
+│   │       └── styles.ts
+│   ├── index.css
+│   ├── main.tsx
+│   ├── services
+│   │   └── storage.ts
+│   └── vite-env.d.ts
+├── structure.txt
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+12 directories, 35 files

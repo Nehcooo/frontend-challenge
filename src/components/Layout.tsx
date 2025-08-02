@@ -1,23 +1,36 @@
 import { Box } from "@mui/material";
 
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Header from "./Header/Header";
+import Sidebar from "./Sidebar/Sidebar";
+
+const styles = {
+    layout: {
+        display: "flex",
+        height: "100vh",
+    },
+    layoutContent: {
+        flexGrow: 1,
+        display: "flex",
+        flexDirection: "column",
+    },
+    layoutContentWrapper: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        padding: "3rem 0rem",
+        width: "100%",
+    },
+}
 
 function Layout({ children }: { children?: React.ReactNode }) {
     return (
-        <Box sx={{ display: "flex", height: "100vh" }}>
+        <Box sx={styles.layout}>
             <Sidebar />
 
-            <Box sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
+            <Box sx={styles.layoutContent}>
                 <Header />
 
-                <Box sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    padding: "3rem 0rem",
-                    width: "100%",
-                }}>
+                <Box sx={styles.layoutContentWrapper}>
                     <Box sx={{
                         margin: "0 2.5rem",
                         width: "90%",

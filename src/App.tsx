@@ -1,10 +1,9 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
 import Layout from "./components/Layout";
-import PinCodeSetupBanner from "./components/PinCodeSetupBanner";
+import PinCodeSetupBanner from "./components/PinCodeSetupBanner/PinCodeSetupBanner";
 
-declare module '@mui/material/styles' {
-
+declare module "@mui/material/styles" {
 	interface PaletteOptions {
 		alert: {
 			main: string;
