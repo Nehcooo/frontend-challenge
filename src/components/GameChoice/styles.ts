@@ -6,13 +6,20 @@ export const gameChoice = {
 }
 
 export const gameChoiceContainer = {
-    display: "flex",
+    display: {
+        xs: "grid",
+        lg: "flex",
+    },
+    gridTemplateColumns: "repeat(2, 1fr)",
     flexDirection: {
         xs: "column",
         md: "row",
     },
     justifyContent: "flex-start",
-    gap: "1rem",
+    gap: {
+        xs: "1rem",
+        md: "1rem",
+    },
 }
 
 export const gameChoiceItem = {

@@ -55,7 +55,7 @@ function GameChoice({ control }: Props) {
                             sx={field.value === game.type ? styles.gameChoiceItemSelected : styles.gameChoiceItem}
                             onClick={() => field.onChange(game.type)}
                         >
-                            <img src={game.img} alt={game.type} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                            <img draggable={false} src={game.img} alt={game.type} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                         </Box>
                     ))}
                 </Box>
