@@ -11,6 +11,7 @@ function PinCodeSetupBanner() {
 
     useEffect(() => {
         const pinCode = storage.get("pinCode");
+        
         setIsPinCodeSetup(pinCode !== null);
     }, []);
 

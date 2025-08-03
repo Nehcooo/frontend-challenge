@@ -1,4 +1,6 @@
-import { Box, Modal, Typography, Button } from "@mui/material";
+import { Box, Modal, Typography } from "@mui/material";
+
+import { storage } from "../../../services/storage";
 
 import LockIcon from "@mui/icons-material/Lock";
 
@@ -10,6 +12,8 @@ type Props = {
 };
 
 function PinCodeModal({ open, onClose }: Props) {
+    const pinCode = storage.get("pinCode");
+
     return (
         <Modal open={open} onClose={onClose}>
             <Box sx={styles.modal}>
@@ -18,16 +22,12 @@ function PinCodeModal({ open, onClose }: Props) {
                 </Box>
 
                 <Typography variant="h6" component="h2" sx={styles.title}>
-                    Votre Code PIN n'est pas configuré
+                    {!pinCode ? "Votre Code PIN n'est pas configuré" : "Votre Code PIN est configuré"}
                 </Typography>
 
                 <Typography variant="body2" sx={styles.subtitle}>
-                    Activez-le pour sécuriser la récupération des cadeaux par vos clients.
+                    {!pinCode ? "Activez-le pour sécuriser la récupération des cadeaux par vos clients." : pinCode}
                 </Typography>
-
-                <Button sx={styles.button} onClick={onClose}>
-                    CONFIGURER MON CODE
-                </Button>
             </Box>
         </Modal>
     );

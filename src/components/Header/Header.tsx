@@ -5,7 +5,10 @@ import type { SvgIconProps } from "@mui/material";
 
 import QrCodeIcon from "@mui/icons-material/QrCode";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+
 import PinCodeModal from "../modals/PinCodeModal/PinCodeModal";
+import QrCodeModal from "../modals/QrCodeModal/QrCodeModal";
+import MoreOptionsMenu from "../menus/MoreOptionsMenu/MoreOptionsMenu";
 
 import * as styles from "./styles";
 
@@ -27,6 +30,8 @@ function CircleEllipse() {
 
 function Header() {
     const [isPinCodeModalOpen, setIsPinCodeModalOpen] = useState(false);
+    const [isQrCodeModalOpen, setIsQrCodeModalOpen] = useState(false);
+    const [moreOptionsAnchorEl, setMoreOptionsAnchorEl] = useState<null | HTMLElement>(null);
 
     return (
         <Box sx={styles.header}>
@@ -53,7 +58,7 @@ function Header() {
                                 Mon Code PIN
                             </Button>
 
-                            <Button variant="contained" sx={styles.qrButton} startIcon={<QrCodeIcon />}>
+                            <Button variant="contained" sx={styles.qrButton} startIcon={<QrCodeIcon />} onClick={() => setIsQrCodeModalOpen(true)}>
                                 QR Code
                             </Button>
 
@@ -61,7 +66,7 @@ function Header() {
                                 Sauvegarder
                             </Button>
 
-                            <IconButton aria-label="Plus" sx={styles.moreButton}>
+                            <IconButton aria-label="Plus" sx={styles.moreButton} onClick={(event) => setMoreOptionsAnchorEl(event.currentTarget)}>
                                 <MoreHorizIcon sx={styles.moreButtonIcon} />
                             </IconButton>
                         </Box>
@@ -78,6 +83,8 @@ function Header() {
             </Box>
 
             <PinCodeModal open={isPinCodeModalOpen} onClose={() => setIsPinCodeModalOpen(false)} />
+            <QrCodeModal open={isQrCodeModalOpen} onClose={() => setIsQrCodeModalOpen(false)} />
+            <MoreOptionsMenu anchorEl={moreOptionsAnchorEl} open={moreOptionsAnchorEl !== null} onClose={() => setMoreOptionsAnchorEl(null)} />
         </Box>
     );
 }
