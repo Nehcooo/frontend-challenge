@@ -1,7 +1,12 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
+import { useForm } from "react-hook-form";
+import type { Campaign } from "../doc/CampaignType";
+
 import Layout from "./components/Layout";
 import PinCodeSetupBanner from "./components/PinCodeSetupBanner/PinCodeSetupBanner";
+import ActionsOrder from "./components/ActionsOrder/ActionsOrder";
+import GameChoice from "./components/GameChoice/GameChoice";
 
 declare module "@mui/material/styles" {
 	interface PaletteOptions {
@@ -48,14 +53,24 @@ const theme = createTheme({
 });
 
 function App() {
+	const { control, handleSubmit } = useForm<Campaign>();
+
+	const onSave = (data: Campaign) => {
+		console.log("save data : ", data);
+	}
+
 	return (
 		<>
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
 
-				<Layout>
-					<PinCodeSetupBanner />
-				</Layout>
+				<form onSubmit={handleSubmit(onSave)} noValidate>
+					<Layout>
+						<PinCodeSetupBanner />
+						<ActionsOrder />
+						<GameChoice control={control} />
+					</Layout>
+				</form>
 			</ThemeProvider>
 		</>
 	)

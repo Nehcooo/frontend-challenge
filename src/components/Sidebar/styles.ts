@@ -3,7 +3,7 @@ export const container = {
         xs: "100px",
         sm: "300px",
     },
-    height: "auto",
+    height: "100%",
     backgroundColor: "white",
     borderRight: 1,
     borderBottom: 1,
@@ -15,6 +15,7 @@ export const container = {
     },
     flexDirection: "column",
     alignItems: "center",
+    paddingBottom: "1.5rem",
 }
 
 export const logoWrapper = {

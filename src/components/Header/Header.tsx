@@ -62,7 +62,7 @@ function Header() {
                                 QR Code
                             </Button>
 
-                            <Button variant="contained" sx={styles.saveButton}>
+                            <Button variant="contained" sx={styles.saveButton} type="submit">
                                 Sauvegarder
                             </Button>
 

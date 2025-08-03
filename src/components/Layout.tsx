@@ -6,7 +6,8 @@ import Sidebar from "./Sidebar/Sidebar";
 const styles = {
     layout: {
         display: "flex",
-        height: "100vh",
+        minHeight: "100vh",
+        height: "auto",
     },
     layoutContent: {
         flexGrow: 1,
