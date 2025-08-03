@@ -150,6 +150,7 @@ export const flyerBox = {
 export const flyerTitle = {
     fontWeight: "bold",
     fontSize: "0.65rem",
+    textAlign: "center",
 }
 
 export const flyerDescription = {

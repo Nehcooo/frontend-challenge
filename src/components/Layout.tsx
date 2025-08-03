@@ -18,7 +18,7 @@ const styles = {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "flex-start",
-        padding: "3rem 0rem",
+        padding: "0rem 0rem 3rem 0rem",
         width: "100%",
     },
 }

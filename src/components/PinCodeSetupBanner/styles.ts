@@ -15,6 +15,7 @@ export const container = {
         xs: "column",
         lg: "row",
     },
+    marginTop: "3rem",
 }
 
 export const contentWrapper = {
