@@ -1,7 +1,7 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
 import { useForm } from "react-hook-form";
-import type { Campaign } from "../doc/CampaignType";
+import type { Campaign } from "./types/CampaignType";
 
 import Layout from "./components/Layout";
 import PinCodeSetupBanner from "./components/PinCodeSetupBanner/PinCodeSetupBanner";

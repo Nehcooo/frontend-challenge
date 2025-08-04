@@ -30,6 +30,9 @@ export const gameChoiceItem = {
     height: "100%",
     marginTop: "2.5rem",
     overflow: "hidden",
+    transition: "all 0.3s ease",
+    border: 5,
+    borderColor: "transparent",
     "&:hover": {
         cursor: "pointer",
         opacity: 0.8,

@@ -171,7 +171,7 @@ export const footer = {
 }
 
 export const footerText = {
-    fontSize: "0.8rem",
+    fontSize: "0.75rem",
     color: "custom.grey",
     fontWeight: "500",
 }

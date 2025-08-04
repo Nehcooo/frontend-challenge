@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 
 import { useController, type Control } from "react-hook-form";
-import type { GameType, Campaign } from "../../../doc/CampaignType";
+import type { GameType, Campaign } from "../../types/CampaignType";
 
 import SectionHeader from "../SectionHeader/SectionHeader";
 
