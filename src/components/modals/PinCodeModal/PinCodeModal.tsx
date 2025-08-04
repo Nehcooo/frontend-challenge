@@ -1,5 +1,4 @@
 import { Box, Modal, Typography } from "@mui/material";
-
 import { storage } from "../../../services/storage";
 
 import LockIcon from "@mui/icons-material/Lock";

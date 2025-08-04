@@ -47,7 +47,10 @@ export const sectionHeaderCollapse = {
     alignItems: "center",
     position: "absolute",
     right: 0,
-    top: -20,
+    top: {
+        xs: -40,
+        md: -20,
+    },
 }
 
 export const sectionHeaderCollapseIcon = {

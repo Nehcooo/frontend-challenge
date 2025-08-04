@@ -18,12 +18,16 @@ declare module "@mui/material/styles" {
 			iconButtonBorder: string;
 			textGrey: string;
 			textSmallGrey: string;
+			success: string;
 		};
 	}
 
 	interface Palette {
 		alert: {
 			main: string;
+		};
+		custom: {
+			success: string;
 		};
 	}
 }
@@ -48,6 +52,7 @@ const theme = createTheme({
 			iconButtonBorder: "#DADCE0",
 			textGrey: "#666666",
 			textSmallGrey: "#999999",
+			success: "#00FF00",
 		},
 	},
 });
@@ -67,7 +72,7 @@ function App() {
 				<form onSubmit={handleSubmit(onSave)} noValidate>
 					<Layout>
 						<PinCodeSetupBanner />
-						<ActionsOrder />
+						<ActionsOrder control={control} />
 						<GameChoice control={control} />
 					</Layout>
 				</form>

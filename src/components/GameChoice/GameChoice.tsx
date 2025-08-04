@@ -1,16 +1,16 @@
 import { Box } from "@mui/material";
-
 import { useController, type Control } from "react-hook-form";
+
 import type { GameType, Campaign } from "../../types/CampaignType";
 
 import SectionHeader from "../SectionHeader/SectionHeader";
-
-import * as styles from "./styles";
 
 import wheelImg from "../../assets/wheel.jpg";
 import slotMachineImg from "../../assets/slot.png";
 import mysteryImg from "../../assets/mystery.png";
 import cardImg from "../../assets/card.png";
+
+import * as styles from "./styles";
 
 const games: { type: GameType, img: string }[] = [
     {

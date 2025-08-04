@@ -1,5 +1,5 @@
 export const container = {
-    width: {
+    minWidth: {
         xs: "100px",
         sm: "300px",
     },
