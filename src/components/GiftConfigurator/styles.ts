@@ -1,11 +1,30 @@
-export const addActionButtonWrapper = {
-    position: "relative",
+export const giftConfigurator = {
+    marginTop: "3.5rem",
+    borderTop: 1.5,
+    borderColor: "custom.border",
+    paddingTop: "3.5rem",
 }
 
-export const addActionButton = {
+export const giftConfiguratorContainer = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    flexDirection: "column",
+    width: "100%",
+    height: "100%",
+    marginTop: "2.5rem",
+}
+
+export const buttonActionContainer = {
     position: "absolute",
     right: "0",
     top: "-2.5em",
+    display: "flex",
+    alignItems: "center",
+    gap: "15px",
+}
+
+export const buttonAction = {
     backgroundColor: "primary.main",
     color: "text.secondary",
     boxShadow: "none",
@@ -19,12 +38,13 @@ export const addActionButton = {
     },
 }
 
+
 export const tableContainer = {
     border: "1px solid",
     borderColor: "custom.border",
     borderRadius: "0.5rem",
     marginTop: {
-        xs: "2rem",
+        xs: "3rem",
         md: "1.5rem",
     },
   };
@@ -37,6 +57,9 @@ export const tableCell = {
     overflow: "hidden",
     textOverflow: "ellipsis",
     whiteSpace: "nowrap",
+
+    gap: "0.5rem",
+    width: "100%",
 }
 
 export const tableActionCell = {
@@ -51,43 +74,4 @@ export const tableActionCell = {
 export const deleteButton = {
     fontSize: "0.5rem",
     padding: "0rem",
-}
-
-export const actionIconWrapper = {
-    ml: "0.5rem",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: 25,
-    height: 25,
-    bgcolor: "white",
-    borderRadius: "50%",
-    boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
-}
-
-export const actionAlert = {
-    position: "relative",
-    display: "flex",
-    alignItems: "center",
-    gap: "0.5rem",
-    height: {
-        xs: "60px",
-        md: "50px",
-    },
-}
-
-export const actionAlertBar = {
-    backgroundColor: "alert.main",
-    width: "8px",
-    height: "100%",
-}
-
-export const actionAlertContent = {
-    height: "100%",
-    padding: "0.5rem",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    width: "100%",
-    whiteSpace: "pre-line",
 }

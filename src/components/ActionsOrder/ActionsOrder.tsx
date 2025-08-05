@@ -289,6 +289,16 @@ function ActionsOrder({ control }: Props) {
                         </Droppable>
                     </DragDropContext>
                 </TableContainer>
+
+                <Box mt={2.5} sx={styles.actionAlert}>
+                    <Box sx={styles.actionAlertBar} />
+
+                    <Box sx={{ ...styles.actionAlertContent, backgroundColor: (theme) => theme.palette.alert.main + "55" }}>
+                        <Typography sx={{ fontSize: "0.7rem", fontWeight: "", color: "secondary.main", fontStyle: "italic" }}>
+                            {"⚠️ Une seule action = une seule participation\nVos clients ne joueront qu'une seule fois si vous ne proposez qu'une seule action."}
+                        </Typography>
+                    </Box>
+                </Box>
             </SectionHeader>
         </Box>
     );

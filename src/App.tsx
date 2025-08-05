@@ -8,6 +8,7 @@ import PinCodeSetupBanner from "./components/PinCodeSetupBanner/PinCodeSetupBann
 import ActionsOrder from "./components/ActionsOrder/ActionsOrder";
 import GameChoice from "./components/GameChoice/GameChoice";
 import CustomGame from "./components/CustomGame/CustomGame";
+import GiftConfigurator from "./components/GiftConfigurator/GiftConfigurator";
 
 declare module "@mui/material/styles" {
 	interface PaletteOptions {
@@ -76,6 +77,7 @@ function App() {
 						<ActionsOrder control={control} />
 						<GameChoice control={control} />
 						<CustomGame control={control} />
+						<GiftConfigurator control={control} />
 					</Layout>
 				</form>
 			</ThemeProvider>
