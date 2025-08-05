@@ -45,7 +45,7 @@ export const tableContainer = {
     borderRadius: "0.5rem",
     marginTop: {
         xs: "3rem",
-        md: "1.5rem",
+        lg: "1.5rem",
     },
   };
   
