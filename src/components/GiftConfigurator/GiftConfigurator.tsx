@@ -1,4 +1,16 @@
-import { Box, Button, IconButton, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Typography, Switch } from "@mui/material";
+import {
+    Box,
+    Button,
+    IconButton,
+    TableContainer,
+    Table,
+    TableHead,
+    TableRow,
+    TableCell,
+    TableBody,
+    Typography,
+    Switch,
+} from "@mui/material";
 import { type Control, useController } from "react-hook-form";
 
 import SectionHeader from "../SectionHeader/SectionHeader";

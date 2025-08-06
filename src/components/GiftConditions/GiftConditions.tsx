@@ -1,4 +1,15 @@
-import { Box, TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Typography, IconButton, TextField } from "@mui/material";
+import { 
+    Box,
+    TableContainer,
+    Table,
+    TableHead,
+    TableRow,
+    TableCell,
+    TableBody,
+    Typography,
+    IconButton,
+    TextField,
+} from "@mui/material";
 import { type Control, useController } from "react-hook-form";
 
 import SectionHeader from "../SectionHeader/SectionHeader";
@@ -49,13 +60,10 @@ function GiftConditions({ control }: Props) {
                         size="small"
                         sx={{
                             width: {
-                                xs: "100%",
+                                xs: "95%",
                                 md: "340px",
                             },
-                            marginLeft: {
-                                xs: "0px",
-                                lg: "20px",
-                            },
+                            marginLeft: "20px",
                             "& .MuiOutlinedInput-root": {
                                 "& fieldset": {
                                     borderColor: "custom.border",
