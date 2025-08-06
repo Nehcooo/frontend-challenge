@@ -47,7 +47,7 @@ function GiftConfigurator({ control }: Props) {
                 description={"Indiquez les récompenses que vos clients pourront gagner. Offrez des cadeaux attractifs pour augmenter\nleur engagement et leur fidélité."}
             >
                 <Box sx={styles.giftConfiguratorContainer}>
-                    <SwitchButton defaultChecked={true} titleWidth="130px" title="Jeu 100% Gagnant" description={"Cochez cette option pour garantir un gain à chaque joueur. Si vous\nla décochez, une case 'Perdu' sera automatiquement ajoutée au jeu."} />
+                    <SwitchButton defaultChecked={true} title="Jeu 100% Gagnant" description={"Cochez cette option pour garantir un gain à chaque joueur. Si vous\nla décochez, une case 'Perdu' sera automatiquement ajoutée au jeu."} />
                 </Box>
 
                 <Box mt={2.5} sx={{ position: "relative" }}>

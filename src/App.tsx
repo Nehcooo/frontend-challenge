@@ -9,6 +9,7 @@ import ActionsOrder from "./components/ActionsOrder/ActionsOrder";
 import GameChoice from "./components/GameChoice/GameChoice";
 import CustomGame from "./components/CustomGame/CustomGame";
 import GiftConfigurator from "./components/GiftConfigurator/GiftConfigurator";
+import GiftConditions from "./components/GiftConditions/GiftConditions";
 
 declare module "@mui/material/styles" {
 	interface PaletteOptions {
@@ -64,6 +65,8 @@ function App() {
 
 	const onSave = (data: Campaign) => {
 		console.log("save data : ", data);
+		
+		alert("Données sauvegardées avec succès !");
 	}
 
 	return (
@@ -78,6 +81,7 @@ function App() {
 						<GameChoice control={control} />
 						<CustomGame control={control} />
 						<GiftConfigurator control={control} />
+						<GiftConditions control={control} />
 					</Layout>
 				</form>
 			</ThemeProvider>
