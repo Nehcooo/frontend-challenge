@@ -3,11 +3,16 @@ export const container = {
     alignItems: "flex-start",
     justifyContent: "center",
     flexDirection: "column",
+    width: {
+        xs: "100%",
+        lg: "32.5%",
+    },
 }
 
 export const leftSection = {
     display: "flex",
     alignItems: "flex-start",
+    width: "100%",
 }
 
 export const verticalBar = {
@@ -22,6 +27,7 @@ export const titleContainer = {
     display: "flex",
     flexDirection: "column",
     marginTop: "-5px",
+    width: "100%",
 }
 
 export const title = {
@@ -29,7 +35,8 @@ export const title = {
     color: "text.primary",
     display: "flex",
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "space-between",
+    width: "100%",
 }
 
 export const subtitle = {
@@ -41,5 +48,5 @@ export const subtitle = {
 
 export const button = {
     position: "relative",
-    right: 0,
+    right: -10,
 }

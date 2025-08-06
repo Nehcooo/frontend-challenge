@@ -4,13 +4,15 @@ import { Box, Typography, Switch } from '@mui/material';
 import * as styles from "./styles";
 
 type Props = {
-    titleWidth?: string;
     title: string;
     description: string;
     defaultChecked?: boolean;
+    color?: "warning" | "default";
+    borderColor?: string;
+    spaceBetween?: boolean;
 }
 
-const SwitchButton = ({ title, description, titleWidth, defaultChecked }: Props) => {
+const SwitchButton = ({ title, description, defaultChecked, color = "warning", borderColor = "secondary.main", spaceBetween = false }: Props) => {
     const [enabled, setEnabled] = useState(defaultChecked || false);
 
     const handleToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,18 +22,18 @@ const SwitchButton = ({ title, description, titleWidth, defaultChecked }: Props)
     return (
         <Box sx={styles.container}>
             <Box sx={styles.leftSection}>
-                <Box sx={styles.verticalBar} />
+                <Box sx={{ ...styles.verticalBar, backgroundColor: borderColor }} />
                 <Box sx={styles.titleContainer}>
-                    <Typography sx={styles.title}>
-                        <Typography sx={{ fontSize: "0.85rem", fontWeight: "bold", width: titleWidth }}>{title}</Typography>
+                    <Box sx={{ ...styles.title, justifyContent: spaceBetween ? "space-between" : "flex-start" }}>
+                        <Typography sx={{ fontSize: "0.85rem", fontWeight: "bold" }}>{title}</Typography>
 
                         <Switch
                             checked={enabled}
                             onChange={handleToggle}
-                            color="warning"
+                            color={color}
                             sx={styles.button}
                         />
-                    </Typography>
+                    </Box>
 
                     <Typography sx={styles.subtitle}>
                         {description}
